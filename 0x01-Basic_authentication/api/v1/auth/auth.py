@@ -7,7 +7,9 @@ from typing import List, TypeVar
 class Auth:
     '''Class containing all auth methods'''
 
-    def require_auth(self, path: str, excluded_paths: List[str], strict_slashes=False) -> bool:
+    def require_auth(self, path: str, excluded_paths: List[str],
+                     strict_slashes=False) -> bool:
+
         """Checks if the path provided requires authentication """
         if path is None or excluded_paths is None or excluded_paths == []:
             return True
