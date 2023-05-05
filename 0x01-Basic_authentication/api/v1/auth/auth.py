@@ -8,8 +8,8 @@ class Auth:
     '''Class that will contain auth methods'''
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """Returns false-path """
-        return path
+        """Returns false """
+        return False
 
     def authorization_header(self, request=None) -> str:
         """Returns None, flast request object"""
