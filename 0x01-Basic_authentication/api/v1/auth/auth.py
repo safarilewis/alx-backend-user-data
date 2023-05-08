@@ -30,7 +30,7 @@ class Auth:
         """Performs request validation to secure the API"""
         if request == None:
             return None
-        elif not request.headers.get('Authorization', None):
+        elif request.headers.get('Authorization', None) == None:
             return None
         else:
             return request.headers.get('Authorization', None)
