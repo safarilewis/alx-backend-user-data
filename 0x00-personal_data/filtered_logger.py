@@ -60,8 +60,8 @@ def get_db() -> mysql.connctor.connections.MySQLConnections:
 
 def main():
     '''Logs info about user in a table'''
-    db = get_db()
     logger = get_logger()
+    db = get_db()
     cursor = db.cursor()
     cursor.execute("SELECT * FROM users;")
     fields = cursor.column_names
