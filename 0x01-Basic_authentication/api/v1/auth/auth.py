@@ -30,10 +30,10 @@ class Auth:
         """Performs request validation to secure the API"""
         if request is None:
             return None
-        elif not request.headers.get('Authorization',None):
+        elif not request.headers.get('Authorization', None):
             return None
-        else: return request.headers.get('Authorization',None)
-
+        else:
+            return request.headers.get('Authorization', None)
 
     def current_user(self, request=None) -> TypeVar('User'):
         """Returns Flask request object None-request"""
