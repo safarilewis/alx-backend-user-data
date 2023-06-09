@@ -39,7 +39,7 @@ class DB:
         self._session.commit()
         return user
 
-    def find_user(self, **kwargs) -> User:
+    def find_user_by(self, **kwargs) -> User:
         '''Find a user using ID'''
         users = self._session.query(User)
         for key, value in kwargs.items:
