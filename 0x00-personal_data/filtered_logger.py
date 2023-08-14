@@ -47,7 +47,7 @@ def get_logger() -> logging.Logger:
     return logger
 
 
-def get_db() -> mysql.connector.connections.MySQLConnection:
+def get_db() -> mysql.connector.connection.MySQLConnection:
     '''Creates connection to db'''
     host = os.getenv(PERSONAL_DATA_DB_HOST)
     name = os.getenv(PERSONAL_DATA_DB_NAME)
